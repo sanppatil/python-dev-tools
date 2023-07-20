@@ -5,12 +5,14 @@ show_pages(
     [
         Page("main_app.py", "Dev Tools", "🏠"),
         Section(name="Files", icon=":gear:"),
-        Page("utilities/csv_viewer.py", "CSV Viewer", ":mag:"),
+        Page("utility/csv_viewer.py", "CSV Viewer", ":mag:"),
         Section(name="Utilities", icon=":gear:"),
-        Page("utilities/b64_encoder.py", "Base64 Encoder", ":mag:"),
-        Page("utilities/b64_decoder.py", "Base64 Decoder", ":mag:"),
+        Page("utility/b64_encoder.py", "Base64 Encoder", ":mag:"),
+        Page("utility/b64_decoder.py", "Base64 Decoder", ":mag:"),
         Section(name="Security", icon=":gear:"),
-        Page("utilities/jwt_viewer.py", "JWT Viewer", ":key:"),
+        Page("security/jwt_viewer.py", "JWT Viewer", ":key:"),
+        Page("security/aes_encrypter.py", "AES Encrption", ":key:"),
+        Page("security/aes_decrypter.py", "AES Decryption", ":key:"),
     ]
 )
 

@@ -1,8 +1,6 @@
 import streamlit as st
-import pandas as pd
-from io import StringIO
 from st_pages import add_page_title
-import utilities
+from base64 import b64decode
 import jwt
 import json
 
@@ -14,7 +12,7 @@ encoded_token = st.text_area('Encoded Token', 'eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1N
 token_parts = encoded_token.split(".")
 
 st.subheader("Header")
-jwt_header = json.loads(utilities.base64_decode(token_parts[0]))
+jwt_header = json.loads(b64decode(token_parts[0]))
 st.json(jwt_header)
 
 st.subheader("Payload")
