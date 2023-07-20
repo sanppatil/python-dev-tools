@@ -11,7 +11,7 @@ show_pages(
         Page("utility/b64_decoder.py", "Base64 Decoder", ":mag:"),
         Section(name="Security", icon=":gear:"),
         Page("security/jwt_viewer.py", "JWT Viewer", ":key:"),
-        Page("security/aes_encrypter.py", "AES Encrption", ":key:"),
+        Page("security/aes_encrypter.py", "AES Encryption", ":key:"),
         Page("security/aes_decrypter.py", "AES Decryption", ":key:"),
     ]
 )
@@ -20,6 +20,7 @@ add_page_title()  # Optional method to add title and icon to current page
 
 hide_streamlit_style = """
             <style>
+            #MainMenu {visibility: hidden;}
             footer {visibility: hidden;}
             </style>
             """

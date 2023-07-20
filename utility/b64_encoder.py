@@ -12,3 +12,11 @@ input_string = st.text_area('Plain Text', "And if at first your don't succeed, t
 st.subheader("Base64 Encoded Text")
 output_b64_bytes = b64encode(input_string.encode("UTF-8"))
 st.write(output_b64_bytes.decode("UTF-8"))
+
+hide_streamlit_style = """
+            <style>
+            #MainMenu {visibility: hidden;}
+            footer {visibility: hidden;}
+            </style>
+            """
+st.markdown(hide_streamlit_style, unsafe_allow_html=True)

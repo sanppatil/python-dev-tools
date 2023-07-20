@@ -38,3 +38,11 @@ else:
 encrypted_text_bytes = cipher.encrypt(pad(plain_text_bytes, AES.block_size))
 encrypted_text_b64 = b64encode(encrypted_text_bytes)
 st.write(encrypted_text_b64.decode("UTF-8"))
+
+hide_streamlit_style = """
+            <style>
+            #MainMenu {visibility: hidden;}
+            footer {visibility: hidden;}
+            </style>
+            """
+st.markdown(hide_streamlit_style, unsafe_allow_html=True)

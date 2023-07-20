@@ -11,3 +11,11 @@ input_string = st.text_area('Encoded Text', 'V29yayBpdCwgbWFrZSBpdCwgZG8gaXQsIG1
 st.subheader("Plain Text")
 input_string_bytes = b64decode(input_string)
 st.write(input_string_bytes.decode("UTF-8"))
+
+hide_streamlit_style = """
+            <style>
+            #MainMenu {visibility: hidden;}
+            footer {visibility: hidden;}
+            </style>
+            """
+st.markdown(hide_streamlit_style, unsafe_allow_html=True)

@@ -38,3 +38,11 @@ else:
 plain_text = unpad(cipher.decrypt(encrypted_text_bytes), AES.block_size)
 
 st.write(plain_text.decode("UTF-8"))
+
+hide_streamlit_style = """
+            <style>
+            #MainMenu {visibility: hidden;}
+            footer {visibility: hidden;}
+            </style>
+            """
+st.markdown(hide_streamlit_style, unsafe_allow_html=True)

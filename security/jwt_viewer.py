@@ -21,3 +21,11 @@ st.json(jwt.decode(jwt=encoded_token, options={"verify_signature": False}))
 st.subheader("Signature")
 algorithm = jwt_header["alg"]
 st.write(token_parts[2])
+
+hide_streamlit_style = """
+            <style>
+            #MainMenu {visibility: hidden;}
+            footer {visibility: hidden;}
+            </style>
+            """
+st.markdown(hide_streamlit_style, unsafe_allow_html=True)
